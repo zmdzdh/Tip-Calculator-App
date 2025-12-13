@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="logo">SPLI<br>TTER</div>
+
+    <div class="calculator">
+        <div class="input-section">
+            <div class="input-group">
+                <label>Bill</label>
+                <div class="input-wrapper">
+                    <input type="number" id="billInput" placeholder="0" min="0" step="0.01">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Select Tip %</label>
+                <div class="tip-buttons">
+                    <button class="tip-btn" data-tip="5">5%</button>
+                    <button class="tip-btn" data-tip="10">10%</button>
+                    <button class="tip-btn" data-tip="15">15%</button>
+                    <button class="tip-btn" data-tip="25">25%</button>
+                    <button class="tip-btn" data-tip="50">50%</button>
+                    <input type="number" class="custom-input" id="customTip" placeholder="Custom" min="0" max="100">
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Number of People</label>
+                <div class="input-wrapper people">
+                    <input type="number" id="peopleInput" placeholder="0" min="1" step="1">
+                </div>
+            </div>
+        </div>
+
+        <div class="result-section">
+            <div>
+                <div class="result-row">
+                    <div>
+                        <div class="result-label">Tip Amount</div>
+                        <div class="result-sublabel">/ person</div>
+                    </div>
+                    <div class="result-amount" id="tipAmount">$0.00</div>
+                </div>
+
+                <div class="result-row">
+                    <div>
+                        <div class="result-label">Total</div>
+                        <div class="result-sublabel">/ person</div>
+                    </div>
+                    <div class="result-amount" id="totalAmount">$0.00</div>
+                </div>
+            </div>
+
+            <button class="reset-btn" id="resetBtn" disabled>RESET</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
